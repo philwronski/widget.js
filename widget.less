@@ -7,6 +7,8 @@
 @primary-font:      "Roboto", sans serif;
 
 @widget-bg:         #fff;
+@widget-font-color: #888;
+@widget-header-height: 32px;
 
 body {
   background-color: #F5F5F5;
@@ -39,39 +41,44 @@ body {
   margin-bottom: 30px;
 
   > .widget-header {
-    line-height: 32px;
+    line-height: @widget-header-height;
+    padding: 0 10px;
+
+    > .widget-icon {
+      padding-right: 5px;
+    }
 
     > .widget-buttons {
-      float:right;
-    }
+      float: right;
 
-    a,
-    i {
-      text-align: center;
-      display: inline-block;
-      width: 28px;
-      heigh: 100%;
-    }
-
-    a:hover{
+      a,
       i {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        display: inline-block;
+        width: 28px;
+        heigh: 100%;
       }
-    }
 
-    a:focus {
-      outline: none;
+      a:hover {
+        i {
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      a:focus {
+        outline: none;
+      }
     }
 
     &.bg-lightgrey {
       a,
       i,
       span {
-        color: #888;
+        color: @widget-font-color;
       }
       a:hover{
         i {
-          color: darken(#888, 20%);
+          color: darken(@widget-font-color, 20%);
         }
       }
     }
@@ -119,8 +126,9 @@ body {
 
   > .widget-body {
     padding: 10px;
-    height: 90%;
+    //height: 90%;
     overflow: auto;
+    color: darken(#888, 20%);
 
     &.collapsed {
       display: none;
@@ -138,7 +146,7 @@ body {
     overflow: auto;
 
     > .widget-body {
-      height: calc(100% - 32px) !important;
+      height: calc(100% - @widget-header-height) !important;
     }
   }
 

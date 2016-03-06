@@ -15,8 +15,8 @@ Just import javascript and css files :
 Use element structure like that :
 
 
-    <div class="widget sm-height" id="widget">
-        <div class="widget-header bg-orange">
+    <div class="widget" id="widget">
+        <div class="widget-header bg-lightgrey">
             <i class="widget-icon fa fa-area-chart"></i>
             <span class="widget-title">Mon widget</span>
             <div class="widget-buttons">
