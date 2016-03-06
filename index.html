@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Widget.js Sample</title>
+    <script src="widget.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="widget.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+    <style>
+        #widget {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="widget sm-height" id="widget">
+        <div class="widget-header bg-orange">
+            <i class="widget-icon fa fa-area-chart"></i>
+            <span class="widget-title">Mon widget</span>
+            <div class="widget-buttons">
+                <a href="#" data-toggle="config"><i class="fa fa-cog"></i></a>
+                <a href="#" data-toggle="maximize"><i class="fa fa-expand"></i>
+                </a><a href="#" data-toggle="collapse"><i class="fa fa-minus"></i></a
+                ><a href="#" data-toggle="close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <div class="widget-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus est et cursus volutpat.
+                Nam dignissim tristique tortor, vitae blandit erat malesuada ut. Integer aliquam tempus venenatis.
+                Nulla metus purus, ultricies sed nibh nec, pharetra consectetur sem. Phasellus mollis malesuada
+                consectetur. Pellentesque turpis augue, ultrices eget volutpat eget, dapibus a nibh. Nullam egestas
+                libero laoreet, sagittis lorem nec, mattis ipsum.</p>
+        </div>
+    </div>
+    <script>
+        var id = document.querySelector('#widget');
+        var widget = new Widget(id, {});
+    </script>
+</div>
+</body>
+</html>
